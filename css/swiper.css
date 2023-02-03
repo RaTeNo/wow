@@ -1,0 +1,136 @@
+.swiper-button-next,
+.swiper-button-prev
+{
+    color: #17161d;
+
+    top: auto;
+    bottom: 100%;
+
+    display: flex;
+
+    width: 60px;
+    height: 60px;
+    margin: 0 0 72px;
+
+    transition: .3s ease-in-out;
+    transform: none;
+
+    border: 2px solid;
+    border-radius: 5px;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.swiper-button-prev
+{
+    right: 80px;
+    left: auto;
+}
+
+.swiper-button-next
+{
+    right: 0;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after
+{
+    display: none;
+}
+
+
+.swiper-button-next .icon,
+.swiper-button-prev .icon
+{
+    display: block;
+
+    width: 15px;
+    height: 14px;
+}
+
+.swiper-button-prev .icon
+{
+    transform: rotate(180deg);
+}
+
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover
+{
+    color: #fff;
+
+    border-color: #17161d;
+    background: #17161d;
+}
+
+
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet
+{
+    margin: 0;
+}
+
+
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction
+{
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+
+    display: flex;
+
+    width: 100%;
+    height: 16px;
+
+    pointer-events: none;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.swiper-pagination-bullet
+{
+    display: block;
+
+    width: 16px;
+    height: 16px;
+
+    transition: .2s linear;
+    pointer-events: auto;
+
+    opacity: .5;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: none;
+}
+
+.swiper-pagination-bullet + .swiper-pagination-bullet
+{
+    margin-left: 10px !important;
+}
+
+.swiper-pagination-bullet:hover
+{
+    opacity: 1;
+}
+
+.swiper-pagination-bullet.active
+{
+    opacity: 1;
+    background: #fff;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet
+{
+    margin: 0;
+}
