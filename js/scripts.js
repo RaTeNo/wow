@@ -393,6 +393,16 @@ $(() => {
 	$('.card_cvv_input').inputmask('999')
 
 
+	// Выбор файла
+	const fileInputs = document.querySelectorAll('form input[type=file]')
+
+	if (fileInputs) {
+		fileInputs.forEach(el => {
+			el.addEventListener('change', () => el.closest('.file').querySelector('label .path').innerText = el.value)
+		})
+	}
+
+
 	if (is_touch_device()) {
 		// Закрытие моб. меню свайпом справо на лево
 		let ts
@@ -412,6 +422,29 @@ $(() => {
 			}
 		})
 	}
+
+
+	// Регистрация - успешная
+	$('.register .form').submit(function (e) {
+		e.preventDefault()
+
+		Fancybox.show([{
+			src: '#register_success_modal',
+			type: 'inline'
+		}])
+	})
+
+
+	// Копирование промокода
+	const clipboard = new ClipboardJS('.copy_btn')
+
+	clipboard.on('success', (e) => {
+		$(e.trigger).addClass('copied')
+
+		setTimeout(() => $(e.trigger).removeClass('copied'), 3000)
+
+		e.clearSelection()
+	})
 })
 
 

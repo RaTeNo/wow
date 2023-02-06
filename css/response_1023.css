@@ -165,6 +165,13 @@
     }
 
 
+    .form .agree_text
+    {
+        font-size: 13px;
+        line-height: 148%;
+    }
+
+
 
     /*-------------------
         First section
@@ -1179,6 +1186,226 @@
         width: 480px;
         max-height: calc(100% - 40px);
         margin-right: -380px;
+    }
+
+
+
+    /*--------------
+        Register
+    --------------*/
+    .register .section .title
+    {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    .register .section .fields
+    {
+        width: 100%;
+    }
+
+
+    .register .form .label
+    {
+        font-size: 13px;
+    }
+
+
+
+    /*-------------------------------
+        LK info - loyalty program
+    -------------------------------*/
+    .loyalty_program .head .card
+    {
+        width: 320px;
+        padding: 24px;
+    }
+
+
+    .loyalty_program .head .discount
+    {
+        width: calc(100% - 344px);
+        padding: 24px;
+    }
+
+
+    .loyalty_program .section .title
+    {
+        font-size: 24px;
+
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .loyalty_program .section .title br
+    {
+        display: none;
+    }
+
+
+    .loyalty_program .section .info
+    {
+        width: 100%;
+    }
+
+
+
+    .loyalty_program .referral
+    {
+        margin-bottom: -24px;
+        margin-left: -24px;
+    }
+
+    .loyalty_program .referral > *
+    {
+        margin-bottom: 24px;
+        margin-left: 24px;
+    }
+
+
+    .loyalty_program .referral .text
+    {
+        font-size: 14px;
+
+        width: 100%;
+    }
+
+
+    .loyalty_program .referral .copy_btn
+    {
+        margin-top: 10px;
+    }
+
+
+    .loyalty_program .delivery_address .type
+    {
+        margin-bottom: 24px;
+        margin-left: -24px;
+    }
+
+    .loyalty_program .delivery_address .type > *
+    {
+        margin-left: 24px;
+    }
+
+
+    .loyalty_program .delivery_address .change_btn
+    {
+        margin-top: 24px;
+    }
+
+
+
+    .loyalty_program .section .row
+    {
+        margin-bottom: -24px;
+        margin-left: -24px;
+    }
+
+    .loyalty_program .section .row > *
+    {
+        width: calc(50% - 24px);
+        margin-bottom: 24px;
+        margin-left: 24px;
+    }
+
+    .loyalty_program .section .row > *.width1of4
+    {
+        width: calc(25% - 24px);
+    }
+
+
+
+    /*---------------
+        Club head
+    ---------------*/
+    .club_head
+    {
+        margin-bottom: 72px;
+        padding: 200px 0 100px;
+    }
+
+
+    .club_head .bg
+    {
+        bottom: -68px;
+
+        width: 860px;
+    }
+
+
+
+    /*----------------
+        Club about
+    ----------------*/
+    .club_about .data
+    {
+        width: calc(100% - 300px);
+    }
+
+
+    .club_about .text_block
+    {
+        font-size: 18px;
+    }
+
+
+    .club_about .exp
+    {
+        font-size: 14px;
+
+        width: 240px;
+    }
+
+
+
+    /*------------------
+        Club special
+    ------------------*/
+    .club_special
+    {
+        margin-bottom: 80px;
+        padding: 80px 0;
+    }
+
+
+    .club_special .data
+    {
+        width: 348px;
+    }
+
+
+    .club_special .title
+    {
+        font-size: 36px;
+    }
+
+
+    .club_special .text_block
+    {
+        font-size: 18px;
+
+        margin-top: 32px;
+    }
+
+
+    .club_special .img
+    {
+        top: -24px;
+        right: -160px;
+
+        width: 560px;
+    }
+
+
+
+    /*------------------
+        Action block
+    ------------------*/
+    .action_block .btn
+    {
+        width: 320px;
     }
 
 

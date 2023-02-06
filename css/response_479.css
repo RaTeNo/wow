@@ -868,6 +868,55 @@
 
 
 
+    /*---------------
+        Club head
+    ---------------*/
+    .club_head
+    {
+        margin-bottom: 60px;
+        padding: 100px 0 68px;
+    }
+
+
+    .club_head .title
+    {
+        font-size: 28px;
+    }
+
+
+    .club_head .bg
+    {
+        width: calc(100% + 160px);
+    }
+
+
+
+    /*------------------
+        Club special
+    ------------------*/
+    .club_special .title
+    {
+        font-size: 28px;
+    }
+
+
+    .club_special .text_block
+    {
+        font-size: 14px;
+    }
+
+
+
+    /*------------------
+        Action block
+    ------------------*/
+    .action_block .title
+    {
+        font-size: 28px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

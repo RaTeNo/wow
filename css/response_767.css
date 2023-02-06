@@ -89,12 +89,6 @@
 
 
 
-    /*-------------
-        Sidebar
-    -------------*/
-
-
-
     /*---------------
         Page head
     ---------------*/
@@ -130,7 +124,8 @@
     /*------------------
         Form elements
     ------------------*/
-    .form .columns > *.width1of3
+    .form .columns > *.width1of3,
+    .form .columns > *.width2of3
     {
         width: calc(100% - var(--form_columns_offset));
     }
@@ -138,6 +133,19 @@
     .form .columns > *.width1of5
     {
         width: calc(33.333% - var(--form_columns_offset));
+    }
+
+
+    .form .line
+    {
+        margin-bottom: 20px;
+    }
+
+
+    .form .file label,
+    .form .file .path
+    {
+        width: 100%;
     }
 
 
@@ -1057,6 +1065,260 @@
         max-height: none;
         margin-right: auto;
         margin-left: auto;
+    }
+
+
+
+    /*--------------
+        Register
+    --------------*/
+    .register .block_title
+    {
+        font-size: 24px;
+
+        margin-bottom: 40px;
+    }
+
+
+    .register .section + .section
+    {
+        margin-top: 48px;
+    }
+
+
+    .register .section .title
+    {
+        font-size: 24px;
+
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .register .section .title br
+    {
+        display: none;
+    }
+
+
+    .register .form .columns
+    {
+        margin-bottom: -28px;
+
+        --form_columns_offset: 24px;
+    }
+
+
+    .register .form .columns .columns > *.width1of3
+    {
+        width: calc(33.333% - var(--form_columns_offset));
+    }
+
+
+    .register .form .fill_auto_btn
+    {
+        display: block;
+
+        width: 100%;
+        margin-top: 0;
+    }
+
+
+
+    /*-------------------------------
+        LK info - loyalty program
+    -------------------------------*/
+    .loyalty_program .head .card
+    {
+        width: 100%;
+    }
+
+
+    .loyalty_program .head .discount
+    {
+        width: 100%;
+        margin-top: 24px;
+    }
+
+
+    .loyalty_program .head .logo,
+    .loyalty_program .head .progress
+    {
+        margin-bottom: 40px;
+    }
+
+
+    .loyalty_program .head .item + .item .tooltip .text
+    {
+        right: 0;
+        left: auto;
+    }
+
+
+
+    .loyalty_program .data .referral .val
+    {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+
+
+    .loyalty_program .section .row > *
+    {
+        width: calc(100% - 24px);
+    }
+
+    .loyalty_program .section .row > *.width1of4
+    {
+        width: calc(50% - 24px);
+    }
+
+
+
+    /*---------------
+        Club head
+    ---------------*/
+    .club_head
+    {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 68px;
+        padding: 108px 0 68px;
+    }
+
+
+    .club_head .cont
+    {
+        order: 2;
+    }
+
+
+    .club_head .data
+    {
+        width: 100%;
+    }
+
+
+    .club_head .title
+    {
+        font-size: 32px;
+    }
+
+
+    .club_head .desc
+    {
+        font-size: 16px;
+    }
+
+
+    .club_head .btn
+    {
+        width: 100%;
+    }
+
+
+    .club_head .bg
+    {
+        position: relative;
+        bottom: 0;
+
+        width: calc(100% + 140px);
+        margin-bottom: 8px;
+        margin-left: -130px;
+    }
+
+
+
+    /*----------------
+        Club about
+    ----------------*/
+    .club_about .data
+    {
+        width: 100%;
+    }
+
+
+    .club_about .text_block
+    {
+        font-size: 16px;
+    }
+
+
+    .club_about .data .btn
+    {
+        width: 100%;
+    }
+
+
+    .club_about .exp
+    {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+
+
+    /*------------------
+        Club special
+    ------------------*/
+    .club_special
+    {
+        margin-bottom: 68px;
+        padding: 68px 0;
+    }
+
+
+    .club_special .data
+    {
+        width: 100%;
+    }
+
+
+    .club_special .title
+    {
+        font-size: 32px;
+    }
+
+
+    .club_special .text_block
+    {
+        font-size: 16px;
+
+        margin-top: 24px;
+    }
+
+
+    .club_special .img
+    {
+        position: relative;
+        top: 0;
+        right: 0;
+
+        width: calc(100% - 40px);
+        margin: 40px auto -24px;
+    }
+
+
+
+    /*------------------
+        Action block
+    ------------------*/
+    .action_block .title
+    {
+        font-size: 32px;
+    }
+
+    .action_block .title br
+    {
+        display: none;
+    }
+
+
+    .action_block .btn
+    {
+        width: 100%;
+        margin-top: 24px;
     }
 
 

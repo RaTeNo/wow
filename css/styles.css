@@ -151,7 +151,7 @@ input[type=number]
 {
     --bg: #fff;
     --scroll_width: 17px;
-    --text_color: #000;
+    --text_color: #17161d;
     --font_size: 20px;
     --font_size_title: 40px;
     --font_size_title_small: 36px;
@@ -1106,8 +1106,6 @@ header .top_banner .title
 
 header .top_banner .close_btn
 {
-    color: #fff;
-
     position: absolute;
     z-index: 9;
     top: 0;
@@ -1132,6 +1130,14 @@ header .top_banner .close_btn .icon
 
     width: 12px;
     height: 12px;
+}
+
+
+header .top_banner.light
+{
+    color: var(--text_color);
+
+    background: #fff;
 }
 
 
@@ -1241,6 +1247,12 @@ header.dark .menu_item > a:hover,
 header.dark .menu_item > a.active
 {
     color: #932c47;
+}
+
+header .menu_item > a.hover_orange:hover,
+header .menu_item > a.hover_orange.active
+{
+    color: #f08b6c;
 }
 
 
@@ -1900,6 +1912,45 @@ header .btns .btn:hover
 }
 
 
+.form .file label
+{
+    display: inline-block;
+
+    cursor: pointer;
+    vertical-align: top;
+}
+
+
+.form .file input
+{
+    display: none;
+}
+
+
+.form .file .path
+{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 52px;
+
+    overflow: hidden;
+
+    width: 267px;
+    max-width: 100%;
+    height: 58px;
+    padding: 0 18px;
+
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+
+    border: 2px solid #17161d;
+    border-radius: 5px;
+}
+
+
 .form .submit
 {
     padding-top: 40px;
@@ -1930,6 +1981,20 @@ header .btns .btn:hover
     color: #fff;
 
     background: var(--text_color);
+}
+
+
+.form .agree_text
+{
+    color: #88888d;
+    font-size: 14px;
+    line-height: 160%;
+
+    margin-top: 10px;
+
+    text-align: center;
+
+    font-feature-settings: 'tnum' on, 'lnum' on;
 }
 
 
@@ -4238,8 +4303,9 @@ header .btns .btn:hover
     font-size: 14px;
     line-height: 120%;
 
-    display: block;
+    display: flex;
 
+    height: 100%;
     padding: 20px;
 
     transition: .2s linear;
@@ -4250,6 +4316,11 @@ header .btns .btn:hover
 
     border: 1px solid #17161d;
     border-radius: 5px;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 .lk_menu a:hover,
@@ -4937,6 +5008,526 @@ header .btns .btn:hover
 .lk_info .points .links a:hover
 {
     text-decoration: none;
+}
+
+
+
+/*-------------------------------
+    LK info - loyalty program
+-------------------------------*/
+.loyalty_program .head
+{
+    display: flex;
+
+    margin-bottom: 60px;
+
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: wrap;
+}
+
+
+
+.loyalty_program .head .card
+{
+    display: flex;
+
+    width: 370px;
+    max-width: 100%;
+    padding: 28px 40px;
+
+    border-radius: 10px;
+
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.loyalty_program .head .card.gold
+{
+    background: linear-gradient(108.79deg, #e1cd86 18.24%, #e0c977 81.92%);
+}
+
+.loyalty_program .head .card.silver
+{
+    background: linear-gradient(84.27deg, #d8d8d8 9.99%, #bfbfbf 91.81%);
+}
+
+.loyalty_program .head .card.bronze
+{
+    background: linear-gradient(97.89deg, #dfbd9c 10.22%, #c5a17e 94.35%);
+}
+
+
+.loyalty_program .head .logo
+{
+    width: 100%;
+    margin-bottom: 44px;
+}
+
+.loyalty_program .head .logo img
+{
+    display: block;
+
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+
+    opacity: .25;
+}
+
+
+.loyalty_program .head .item
+{
+    margin-top: auto;
+}
+
+
+.loyalty_program .head .label
+{
+    color: #000;
+    font-size: 14px;
+    line-height: 120%;
+
+    display: flex;
+
+    letter-spacing: .05em;
+    text-transform: uppercase;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
+.loyalty_program .head .tooltip
+{
+    position: relative;
+
+    margin-left: 10px;
+
+    pointer-events: auto;
+}
+
+
+.loyalty_program .head .icon
+{
+    color: #5e5f67;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22px;
+
+    width: 20px;
+    height: 20px;
+
+    cursor: help;
+    transition: opacity .2s linear;
+    text-align: center;
+
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .14);
+}
+
+
+.loyalty_program .head .text
+{
+    color: #5e5f67;
+    font-size: 12px;
+    line-height: 140%;
+
+    position: absolute;
+    z-index: 3;
+    top: -10px;
+    left: 0;
+
+    display: none;
+
+    width: 240px;
+    padding: 20px;
+
+    letter-spacing: 0;
+    text-transform: none;
+
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, .14);
+}
+
+
+.loyalty_program .head .tooltip:hover .icon
+{
+    opacity: 0;
+}
+
+.loyalty_program .head .tooltip:hover .text
+{
+    display: block;
+}
+
+
+.loyalty_program .head .val
+{
+    color: #000;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 120%;
+
+    margin-top: 10px;
+
+    text-transform: uppercase;
+}
+
+
+
+.loyalty_program .head .discount
+{
+    display: flex;
+    flex-direction: column;
+
+    width: calc(100% - 400px);
+    margin-left: auto;
+    padding: 30px;
+
+    border-radius: 5px;
+    background: #f9fafd;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.loyalty_program .head .progress
+{
+    color: #000;
+    font-size: 14px;
+    line-height: 120%;
+
+    position: relative;
+
+    display: flex;
+    overflow: hidden;
+
+    width: 100%;
+    margin-bottom: 48px;
+
+    white-space: nowrap;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.loyalty_program .head .progress:before
+{
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    content: '';
+
+    border-radius: 10px;
+    background: #d9d9d9;
+}
+
+
+.loyalty_program .head .progress > *:not(.sep)
+{
+    position: relative;
+    z-index: 3;
+
+    min-width: 56px;
+    padding-top: 16px;
+}
+
+.loyalty_program .head .progress > *:not(.sep):before
+{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 7px;
+    height: 7px;
+
+    content: '';
+
+    border-radius: 50%;
+    background: #d9d9d9;
+}
+
+
+.loyalty_program .head .progress > *.sep
+{
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: 2px;
+    margin-top: 2px;
+    margin-left: -56px;
+
+    background: #d9d9d9;
+}
+
+
+.loyalty_program .head .progress > *:not(.sep).active:before,
+.loyalty_program .head .progress > *.sep.active
+{
+    background: #17161d;
+}
+
+
+
+.loyalty_program .section
+{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.loyalty_program .section + .section
+{
+    margin-top: 60px;
+}
+
+
+.loyalty_program .section .title
+{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 120%;
+
+    width: 268px;
+    max-width: 100%;
+
+    text-transform: uppercase;
+}
+
+
+.loyalty_program .section .info
+{
+    width: calc(100% - 300px);
+    margin-left: auto;
+}
+
+
+.loyalty_program .section .row
+{
+    margin-bottom: -20px;
+    margin-left: -30px;
+}
+
+.loyalty_program .section .row > *
+{
+    width: calc(50% - 30px);
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.loyalty_program .section .row > *.width1of4
+{
+    width: calc(25% - 30px);
+}
+
+
+.loyalty_program .referral
+{
+    display: flex;
+
+    margin-bottom: -30px;
+    margin-left: -30px;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.loyalty_program .referral > *
+{
+    max-width: 100%;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+
+.loyalty_program .referral .text
+{
+    color: #757575;
+    font-size: 16px;
+    line-height: 150%;
+
+    width: 270px;
+}
+
+
+.loyalty_program .referral .code
+{
+    width: 170px;
+}
+
+
+.loyalty_program .referral .link
+{
+    width: 310px;
+}
+
+
+.loyalty_program .data .referral .val
+{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 36px;
+
+    white-space: nowrap;
+}
+
+
+.loyalty_program .referral .copy_btn
+{
+    font-size: 16px;
+    line-height: 140%;
+
+    display: flex;
+
+    margin-top: 30px;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.loyalty_program .referral .copy_btn .icon
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+
+.loyalty_program .delivery_address .type
+{
+    display: flex;
+
+    margin-bottom: 30px;
+    margin-left: -30px;
+
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: wrap;
+}
+
+.loyalty_program .delivery_address .type > *
+{
+    font-size: 14px;
+    line-height: 120%;
+
+    margin-left: 30px;
+    padding: 11px 19px;
+
+    letter-spacing: .01em;
+    text-transform: uppercase;
+
+    opacity: .25;
+    border: 1px solid #17161d;
+    border-radius: 5px;
+}
+
+.loyalty_program .delivery_address .type > *.active
+{
+    opacity: 1;
+    border-color: #e5e5eb;
+    background: #e5e5eb;
+}
+
+
+.loyalty_program .delivery_address .change_btn
+{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+
+    width: 170px;
+    max-width: 100%;
+    height: 50px;
+    margin-top: 30px;
+
+    transition: .2s linear;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+
+    border: 2px solid #17161d;
+    border-radius: 5px;
+}
+
+.loyalty_program .delivery_address .change_btn:hover
+{
+    color: #fff;
+
+    background: #17161d;
+}
+
+
+.loyalty_program .data .label
+{
+    color: #5e5f67;
+    font-size: 14px;
+    line-height: 140%;
+
+    margin-bottom: 10px;
+}
+
+
+.loyalty_program .data .val
+{
+    font-size: 16px;
+    line-height: 140%;
+}
+
+
+.loyalty_program .data .val.phone
+{
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.loyalty_program .data .val.phone img
+{
+    display: block;
+
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+
+    border-radius: 50%;
 }
 
 
@@ -6362,6 +6953,624 @@ header .btns .btn:hover
 
 
 
+/*--------------
+    Register
+--------------*/
+.register .block_title
+{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 120%;
+
+    margin-bottom: 29px;
+
+    text-transform: uppercase;
+}
+
+
+.register .section
+{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.register .section.disabled
+{
+    pointer-events: none;
+}
+
+.register .section + .section
+{
+    margin-top: 30px;
+}
+
+
+.register .section .title
+{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 120%;
+
+    width: 268px;
+    max-width: 100%;
+
+    text-transform: uppercase;
+}
+
+.register .section.disabled .title
+{
+    opacity: .25;
+}
+
+
+.register .section .fields
+{
+    width: calc(100% - 300px);
+    margin-left: auto;
+}
+
+
+.register .form .columns
+{
+    margin-bottom: -40px;
+}
+
+
+.register .form .label
+{
+    font-size: 14px;
+    line-height: 140%;
+
+    margin-bottom: 10px;
+}
+
+
+.register .form .input
+{
+    font-size: 16px;
+}
+
+
+.register .form .status .line
+{
+    margin-bottom: -20px;
+    margin-left: -20px;
+
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.register .form .status .line > *
+{
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+
+.register .form .status input
+{
+    display: none;
+}
+
+
+.register .form .status label
+{
+    display: flex;
+
+    cursor: pointer;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+
+.register .form .status label > div:not(.tooltip)
+{
+    font-size: 14px;
+    line-height: 120%;
+
+    padding: 12px 20px 11px;
+
+    transition: background .2s linear;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+
+    border-radius: 5px;
+    background: #f4f4fa;
+}
+
+
+.register .form .status input:checked + div:not(.tooltip)
+{
+    background: #e5e5eb;
+}
+
+
+.register .form .status label.disabled
+{
+    cursor: default;
+    pointer-events: none;
+}
+
+.register .form .status label.disabled > div:not(.tooltip)
+{
+    opacity: .25;
+}
+
+
+.register .form .status .tooltip
+{
+    position: relative;
+
+    margin-left: 10px;
+
+    pointer-events: auto;
+}
+
+
+.register .form .status .tooltip .icon
+{
+    color: #5e5f67;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22px;
+
+    width: 20px;
+    height: 20px;
+
+    cursor: help;
+    transition: opacity .2s linear;
+    text-align: center;
+
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .14);
+}
+
+
+.register .form .status .tooltip .text
+{
+    color: #5e5f67;
+    font-size: 12px;
+    line-height: 140%;
+
+    position: absolute;
+    z-index: 3;
+    top: -10px;
+    left: 0;
+
+    display: none;
+
+    width: 240px;
+    padding: 20px;
+
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, .14);
+}
+
+
+.register .form .status .tooltip .btn
+{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+
+    display: block;
+
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+
+    transition: .2s linear;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+
+    border: 2px solid #17161d;
+    border-radius: 5px;
+}
+
+.register .form .status .tooltip .btn:hover
+{
+    color: #fff;
+
+    background: #17161d;
+}
+
+
+.register .form .status .tooltip:hover .icon
+{
+    opacity: 0;
+}
+
+.register .form .status .tooltip:hover .text
+{
+    display: block;
+}
+
+
+.register .form .fill_auto_btn
+{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+
+    height: 58px;
+    margin-top: 11px;
+    padding: 18px 31px;
+
+    transition: .2s linear;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+
+    border: 2px solid #17161d;
+    border-radius: 5px;
+}
+
+.register .form .fill_auto_btn:hover
+{
+    color: #fff;
+
+    background: #17161d;
+}
+
+
+.register .form .submit_btn
+{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+
+    height: 100px;
+
+    letter-spacing: .01em;
+    text-transform: uppercase;
+}
+
+
+
+/*---------------
+    Club head
+---------------*/
+.club_head
+{
+    color: #fff;
+
+    position: relative;
+    z-index: 3;
+
+    margin-bottom: 160px;
+    padding: 244px 0 192px;
+
+    background: #17161d;
+}
+
+
+.club_head .cont
+{
+    position: relative;
+    z-index: 2;
+}
+
+
+.club_head .data
+{
+    width: 351px;
+    max-width: 100%;
+}
+
+
+.club_head .title
+{
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 120%;
+
+    text-transform: uppercase;
+}
+
+.club_head .title span
+{
+    color: #f08b6c;
+}
+
+
+.club_head .desc
+{
+    font-size: 20px;
+    line-height: 150%;
+
+    margin-top: 20px;
+}
+
+
+.club_head .btn
+{
+    color: currentColor;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 56px;
+
+    display: inline-block;
+
+    width: 270px;
+    height: 60px;
+    margin-top: 20px;
+
+    transition: .2s linear;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.club_head .btn:hover
+{
+    color: var(--text_color);
+
+    border-color: #fff;
+    background: #fff;
+}
+
+
+.club_head .bg
+{
+    position: absolute;
+    z-index: 1;
+    bottom: -126px;
+    left: 50%;
+
+    display: block;
+
+    width: 1600px;
+    height: 826px;
+    margin-left: -800px;
+
+    mix-blend-mode: lighten;
+}
+
+
+
+/*----------------
+    Club about
+----------------*/
+.club_about .data
+{
+    width: 770px;
+    max-width: 100%;
+}
+
+
+.club_about .text_block
+{
+    color: #5e5f67;
+    font-size: 24px;
+    line-height: 150%;
+}
+
+
+.club_about .data .btn
+{
+    color: currentColor;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 56px;
+
+    display: inline-block;
+
+    width: 270px;
+    height: 60px;
+    margin-top: 42px;
+
+    transition: .2s linear;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.club_about .data .btn:hover
+{
+    color: #fff;
+
+    border-color: var(--text_color);
+    background: var(--text_color);
+}
+
+
+.club_about .exp
+{
+    color: #5e5f67;
+    font-size: 16px;
+    line-height: 150%;
+
+    width: 272px;
+    max-width: 100%;
+    margin-left: auto;
+}
+
+.club_about .exp > * + *
+{
+    margin-top: 20px;
+}
+
+
+.club_about .exp .btn
+{
+    color: #932c47;
+
+    position: relative;
+}
+
+.club_about .exp .btn:after
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 1px;
+
+    content: '';
+
+    background: currentColor;
+}
+
+
+
+/*------------------
+    Club special
+------------------*/
+.club_special
+{
+    color: #fff;
+
+    position: relative;
+    z-index: 3;
+
+    margin-bottom: 160px;
+    padding: 160px 0;
+
+    background: linear-gradient(99.11deg, rgba(66, 66, 67, .2) 11.41%, rgba(26, 26, 27, 0) 74.52%), #1a1a1b;
+}
+
+
+.club_special .cont
+{
+    position: relative;
+    z-index: 3;
+}
+
+
+.club_special .data
+{
+    width: 470px;
+    max-width: 100%;
+}
+
+
+.club_special .title
+{
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 120%;
+
+    text-transform: uppercase;
+}
+
+
+.club_special .text_block
+{
+    font-size: 24px;
+    line-height: 150%;
+
+    margin-top: 40px;
+}
+
+
+.club_special .img
+{
+    position: absolute;
+    z-index: 5;
+    top: -89px;
+    right: 50%;
+
+    display: block;
+
+    width: 937px;
+    height: 1168px;
+    margin-right: -820px;
+
+    pointer-events: none;
+}
+
+
+.club_special .bg
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+
+/*------------------
+    Action block
+------------------*/
+.action_block
+{
+    text-align: center;
+}
+
+
+.action_block .title
+{
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 120%;
+
+    text-transform: uppercase;
+}
+
+
+.action_block .btn
+{
+    color: currentColor;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 56px;
+
+    display: inline-block;
+
+    width: 370px;
+    height: 60px;
+    margin-top: 30px;
+
+    transition: .2s linear;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+    letter-spacing: .01em;
+    text-transform: uppercase;
+
+    border: 2px solid;
+    border-radius: 5px;
+}
+
+.action_block .btn:hover
+{
+    color: #fff;
+
+    border-color: var(--text_color);
+    background: var(--text_color);
+}
+
+
+
 /*------------
     Footer
 ------------*/
@@ -6758,6 +7967,11 @@ footer .terms_use_link a:hover
     line-height: 150%;
 
     margin-top: 20px;
+}
+
+.modal_desc > * + *
+{
+    margin-top: 16px;
 }
 
 
